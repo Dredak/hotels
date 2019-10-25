@@ -1,0 +1,21 @@
+@import '../../index.scss';
+
+.comment {
+    background-color: $grey;
+    padding: 1.5rem 2rem;
+    min-height: 8rem;
+    &:first-child{
+        border-top: 1px solid $dark-grey;
+    }
+
+    &__inner-wrapper {
+        border-bottom: 1px solid $dark-grey;
+        padding-bottom: 2rem;
+    }
+
+    &__author {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+}

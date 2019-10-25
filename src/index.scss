@@ -1,0 +1,44 @@
+$black: #000;
+$white: #fff;
+$grey: #EFEFEF;
+$dark-grey: #CCCCCC;
+$light-red: #ff0000;
+$red: #b80d0d;
+
+@mixin responsive ($breakpoint) {
+  @if $breakpoint == phone {
+      @media all and (max-width: 600px) {@content};
+  }
+  @if $breakpoint == phone-sml {
+    @media all and (max-width: 400px) {@content};
+}
+}
+
+*, *::before, *::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  
+  @include responsive(phone) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  color:$black;
+}
+
